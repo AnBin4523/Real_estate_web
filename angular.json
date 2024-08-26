@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "real_estate_app": {
+    "real_estate_listing_app_angular_17": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/real_estate_app",
+            "outputPath": "dist/real_estate_listing_app_angular_17",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -25,6 +25,8 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/font-awesome/css/font-awesome.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -57,10 +59,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "real_estate_app:build:production"
+              "buildTarget": "real_estate_listing_app_angular_17:build:production"
             },
             "development": {
-              "buildTarget": "real_estate_app:build:development"
+              "buildTarget": "real_estate_listing_app_angular_17:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -68,7 +70,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "real_estate_app:build"
+            "buildTarget": "real_estate_listing_app_angular_17:build"
           }
         },
         "test": {
@@ -91,5 +93,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "b90b6211-b9b0-4b9a-9874-9e14f0cc932f"
   }
 }
